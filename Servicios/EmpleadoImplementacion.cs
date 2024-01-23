@@ -9,6 +9,20 @@ namespace REPASO22012024.Servicios
 {
     internal class EmpleadoImplementacion : EmpleadoInterfaz
     {
+        public void borrarCliente(List<ClienteDtos> listaCliente)
+        {
+            Console.WriteLine("¿Que usuario quieres eliminar? Decidelo por su DNI.");
+            string dni = Console.ReadLine();
+
+            foreach (var cliente in listaCliente)
+            {
+                if (cliente.DniCliente.Equals(dni))
+                {
+                    listaCliente.Remove(cliente);
+                }
+            }
+        }
+
         public void validarCliente(List<ClienteDtos> listaCliente)
         {
             foreach (var cliente in listaCliente)
@@ -31,5 +45,12 @@ namespace REPASO22012024.Servicios
 
             }
         }
+
+
     }
+
+
+
+       
+    
 }

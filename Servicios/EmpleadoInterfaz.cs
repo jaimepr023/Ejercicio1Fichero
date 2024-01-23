@@ -10,5 +10,9 @@ namespace REPASO22012024.Servicios
     internal interface EmpleadoInterfaz
     {
         public void validarCliente(List<ClienteDtos> listaCliente);
+
+        public void borrarCliente(List<ClienteDtos> listaCliente);
+
+       
     }
 }

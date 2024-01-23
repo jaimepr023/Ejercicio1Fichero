@@ -36,10 +36,13 @@ namespace REPASO22012024.Controladores
                                 ei.validarCliente(cliente);
                                 break;
                             case 2:
-                                //Borrado de cliente
+                                ei.borrarCliente(cliente);
                                 break;
                             case 3:
-                                //Mostrar cliente
+                               foreach(ClienteDtos mostrar in cliente)
+                                {
+                                    Console.WriteLine(mostrar.ToString());
+                                }
                                 break;
                             default:
                                 Console.WriteLine("[INFOS]- No has escogido ninguna de las opciones seleccionada, a continuacion se le redirigira al menu inicial.");

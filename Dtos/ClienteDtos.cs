@@ -51,12 +51,32 @@ namespace REPASO22012024.Dtos
         override
         public string ToString()
         {
-            string todo = /*%%%%%%%%%%
-                        DNI: 123456678P
-                        NOMBRE: García García, Pedro
-                        ESTADO VALIDACIÓN: si o no
-                        %%%%%%%%%%*/
+            string todo = condicion();
+
             return todo;
         }
-    }
+
+        private string condicion()
+        {
+            if (this.esValidado == true)
+            {
+                string todoSi = "%%%%%%%%%%" + "\n" +
+                               "DNI: " + this.dniCliente + "\n" +
+                               "NOMBRE: " + this.apellido1Cliente + " " + this.apellido2Cliente + ", " + this.nombreCliente + "\n" +
+                               "ESTADO VALIDACIÓN: " + "Si" + "\n"+
+                               "%%%%%%%%%%" + "\n";
+                return todoSi;
+            }
+            else
+            {
+                string todoNO = "%%%%%%%%%%" + "\n" +
+                               "DNI: " + this.dniCliente + "\n" +
+                               "NOMBRE: " + this.apellido1Cliente + " " + this.apellido2Cliente + ", " + this.nombreCliente + "\n" +
+                               "ESTADO VALIDACIÓN: " + "No" + "\n" +
+                               "%%%%%%%%%%" + "\n";
+                return todoNO;
+            }
+
+        }
+    } 
 }
