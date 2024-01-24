@@ -48,6 +48,7 @@ namespace REPASO22012024.Dtos
 
         }
 
+        //Se utiliza sobre todo con los ficheros log el ToString
         override
         public string ToString()
         {

@@ -37,9 +37,9 @@ namespace REPASO22012024.Servicios
                 if (cliente.EsValidado == false)
                 {
                     Console.WriteLine("\\\\\\\\\\" + "\n" +
-                 "DNI--> " + cliente.DniCliente + "\n" +
-                 "Nombre--> " + cliente.NombreCompletoCliente + "\n" +
-                  "\\\\\\\\\\" + "\n");
+                                      "DNI--> " + cliente.DniCliente + "\n" +
+                                      "Nombre--> " + cliente.NombreCompletoCliente + "\n" +
+                                      "\\\\\\\\\\" + "\n");
                     listaAuxiliar.Add(cliente);
                 }
 
