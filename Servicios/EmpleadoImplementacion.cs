@@ -16,14 +16,18 @@ namespace REPASO22012024.Servicios
 
             if (listaCliente.Count > 0)
             {
+                //Asi no da ningun error al haber 0 celdas en la fila
+                ClienteDtos clienteAux = new ClienteDtos();
                 foreach (var cliente in listaCliente)
                 {
                     if (cliente.DniCliente.Equals(dni))
                     {
-                        listaCliente.Remove(cliente);
-                        Console.WriteLine("El usuario con DNI: " + dni + "ha sido borrado");
+                        //Porque tiene la misma referencia.
+                        clienteAux = cliente;
                     }
                 }
+                listaCliente.Remove(clienteAux);
+                Console.WriteLine("El usuario con DNI: " + dni + "ha sido borrado");
             }
             
         }
