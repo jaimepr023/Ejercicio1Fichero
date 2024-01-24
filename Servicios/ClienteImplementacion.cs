@@ -38,6 +38,7 @@ namespace REPASO22012024.Servicios
             }
         }
 
+        //este metodo puedo ahorrarmelo poniendolo en los constructores. 
         private void separarCadena(ClienteDtos clienteNuevo)
         {
             char caracter = ' ' ;

@@ -14,17 +14,24 @@ namespace REPASO22012024.Servicios
             Console.WriteLine("¿Que usuario quieres eliminar? Decidelo por su DNI.");
             string dni = Console.ReadLine();
 
-            foreach (var cliente in listaCliente)
+            if (listaCliente.Count > 0)
             {
-                if (cliente.DniCliente.Equals(dni))
+                foreach (var cliente in listaCliente)
                 {
-                    listaCliente.Remove(cliente);
+                    if (cliente.DniCliente.Equals(dni))
+                    {
+                        listaCliente.Remove(cliente);
+                        Console.WriteLine("El usuario con DNI: " + dni + "ha sido borrado");
+                    }
                 }
             }
+            
         }
 
         public void validarCliente(List<ClienteDtos> listaCliente)
         {
+            Console.WriteLine("Clientes no validos");
+            List<ClienteDtos> listaAuxiliar = new List<ClienteDtos>();
             foreach (var cliente in listaCliente)
             {
                 if (cliente.EsValidado == false)
@@ -33,15 +40,22 @@ namespace REPASO22012024.Servicios
                  "DNI--> " + cliente.DniCliente + "\n" +
                  "Nombre--> " + cliente.NombreCompletoCliente + "\n" +
                   "\\\\\\\\\\" + "\n");
+                    listaAuxiliar.Add(cliente);
                 }
 
-                Console.WriteLine("¿Que usuario quieres validar? Decidelo por su DNI.");
-                string dni = Console.ReadLine();
-
-                if (cliente.DniCliente.Equals(dni))
+                //esta condicion solo sirve si en la lista auxiliar qeu es donde se guardan los clientes no validados hay gente y entra y hace el metodo o no
+                if (listaAuxiliar.Count > 0)
                 {
-                    cliente.EsValidado = true;
+                    Console.WriteLine("¿Que usuario quieres validar? Decidelo por su DNI.");
+                    string dni = Console.ReadLine();
+
+                    if (cliente.DniCliente.Equals(dni))
+                    {
+                        cliente.EsValidado = true;
+                        Console.WriteLine("El usuario con DNI: " + dni + "ha sido validado");
+                    }
                 }
+               
 
             }
         }

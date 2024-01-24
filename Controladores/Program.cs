@@ -26,6 +26,7 @@ namespace REPASO22012024.Controladores
                         break;
 
                     case 1:
+                        Console.WriteLine("VERSION EMPLEADO");
                         opcionMenuEmpleado = mi.menuEmpleado();
                         switch (opcionMenuEmpleado)
                         {
@@ -52,6 +53,7 @@ namespace REPASO22012024.Controladores
                         break;
 
                     case 2:
+                        Console.WriteLine("VERSION CLIENTE");
                         opcionMenuCliente = mi.menuCliente();
                         switch (opcionMenuCliente)
                         {
