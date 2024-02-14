@@ -18,6 +18,7 @@ namespace REPASO22012024.Servicios
             Console.WriteLine("Opcion 2. Acceso cliente (Login).");
             Console.WriteLine("-------------------------------");
             opcion = Int32.Parse(Console.ReadLine());
+
             return opcion;
 
         }
