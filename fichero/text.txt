@@ -1,0 +1,6 @@
+Empieza la APP.
+Se ha abierto el menu principal
+Se ejecuta la version del empleado y su menu.
+Ejecucion de la opcion 0. Volver
+Se ha abierto el menu principal
+Se va a cerrar la aplicacion.

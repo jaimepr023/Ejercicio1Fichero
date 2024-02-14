@@ -7,7 +7,7 @@ namespace REPASO22012024.Controladores
     {
         public static void Main(string[] args)
         {
-            string fichero = "texto.txt";
+            string fichero = @"C:\\Users\\profesor\\source\\repos\\REPASO22012024\\fichero\\text.txt";
             List<ClienteDtos> cliente  = new List<ClienteDtos>();
             MenuInterfaz mi = new MenuImplementacion();
             ClienteInterfaz ci = new ClienteImplementacion();
@@ -149,7 +149,7 @@ namespace REPASO22012024.Controladores
             {
               lectura = sr.ReadToEnd();
             }
-            Console.WriteLine(lectura); 
+            Console.WriteLine(lectura.ToString()); 
         }
     }
 }
